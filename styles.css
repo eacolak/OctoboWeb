@@ -1,12 +1,12 @@
 :root {
-  --ink: #10231f;
-  --muted: #62736e;
-  --paper: #f5f8f6;
+  --ink: #102536;
+  --muted: #617585;
+  --paper: #f4f8fc;
   --card: #ffffff;
-  --line: #dce6e1;
-  --green: #147d64;
-  --green-dark: #0f5e4d;
-  --mint: #dff3eb;
+  --line: #dbe6ef;
+  --blue: #14a4f7;
+  --blue-dark: #0c6efd;
+  --blue-soft: #e7f5ff;
 }
 
 * { box-sizing: border-box; }
@@ -51,20 +51,20 @@ header {
   display: grid;
   place-items: center;
   color: white;
-  background: var(--green);
+  background: linear-gradient(135deg, var(--blue-dark), var(--blue) 58%, #1fcee5);
   border-radius: 10px;
   font-weight: 800;
 }
 
 nav { display: flex; gap: 24px; }
 nav a, footer a { color: var(--muted); font-size: 14px; font-weight: 650; text-decoration: none; }
-nav a:hover, footer a:hover { color: var(--green); }
+nav a:hover, footer a:hover { color: var(--blue); }
 
 main { padding: 88px 0 108px; }
 
 .eyebrow {
   margin-bottom: 20px;
-  color: var(--green);
+  color: var(--blue-dark);
   font-size: 13px;
   font-weight: 750;
   letter-spacing: .12em;
@@ -98,12 +98,12 @@ h1 {
   padding: 0 20px;
   border-radius: 14px;
   color: white;
-  background: var(--green);
+  background: var(--blue);
   font-size: 15px;
   font-weight: 700;
   text-decoration: none;
 }
-.button:hover { background: var(--green-dark); }
+.button:hover { background: var(--blue-dark); }
 
 .cards { margin-top: 72px; }
 .card {
@@ -131,20 +131,20 @@ h1 {
 .document h2, .support-box h2 { margin: 0 0 12px; font-size: 21px; }
 .document p, .support-box p { margin: 0 0 14px; color: var(--muted); font-size: 16px; line-height: 1.75; }
 .document p:last-child, .support-box p:last-child { margin-bottom: 0; }
-.document a, .support-box a { color: var(--green); font-weight: 700; }
+.document a, .support-box a { color: var(--blue-dark); font-weight: 700; }
 
 .support-box {
   max-width: 790px;
   margin-top: 58px;
   padding: 32px;
-  background: var(--mint);
-  border: 1px solid #c1e3d6;
+  background: var(--blue-soft);
+  border: 1px solid #b8ddf7;
   border-radius: 24px;
 }
 .support-email {
   display: inline-block;
   margin: 8px 0 22px;
-  color: var(--green-dark);
+  color: var(--blue-dark);
   font-size: clamp(22px, 4vw, 32px);
   font-weight: 800;
   letter-spacing: -.03em;
