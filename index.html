@@ -3,28 +3,32 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Official privacy, support, and terms information for the Octobo vocabulary learning app.">
+  <meta name="description" content="Official privacy, support, and terms information for the Octobo vocabulary learning app." data-i18n-content="home.desc">
   <title>Octobo — Privacy &amp; Support</title>
   <link rel="stylesheet" href="./styles.css">
 </head>
-<body>
+<body data-title-key="home.title">
   <div class="shell">
     <header>
       <a class="brand" href="./"><img class="brand-mark" src="./assets/octobo-icon.png" alt="" width="32" height="32">Octobo</a>
-      <nav><a href="./privacy/">Privacy</a><a href="./support/">Support</a></nav>
+      <div class="header-end">
+        <nav><a href="./privacy/" data-i18n="nav.privacy">Privacy</a><a href="./support/" data-i18n="nav.support">Support</a><a href="./terms/" data-i18n="nav.terms">Terms</a></nav>
+        <label class="lang"><span class="visually-hidden" data-i18n="lang.label">Language</span><select id="lang-picker" aria-label="Language"></select></label>
+      </div>
     </header>
     <main>
-      <div class="eyebrow">Octobo for iPhone</div>
-      <h1>Learn English vocabulary with clarity.</h1>
-      <p class="lede">Official privacy, support, and legal information for Octobo.</p>
-      <div class="actions"><a class="button" href="./support/">Get support</a></div>
-      <section class="cards" aria-label="Octobo information">
-        <a class="card" href="./privacy/"><h2>Privacy Policy</h2><p>Learn what information Octobo processes and how you can control your data.</p></a>
-        <a class="card" href="./support/"><h2>Support</h2><p>Contact us about accounts, study progress, bugs, privacy, or feedback.</p></a>
-        <a class="card" href="./terms/"><h2>Terms of Use</h2><p>Read the straightforward terms for using Octobo.</p></a>
+      <div class="eyebrow" data-i18n="home.eyebrow">Octobo for iPhone</div>
+      <h1 data-i18n="home.h1">Learn English vocabulary with clarity.</h1>
+      <p class="lede" data-i18n="home.lede">Official privacy, support, and legal information for Octobo.</p>
+      <div class="actions"><a class="button" href="./support/" data-i18n="home.cta">Get support</a></div>
+      <section class="cards" aria-label="Octobo">
+        <a class="card" href="./privacy/"><h2 data-i18n="home.privacy.h">Privacy Policy</h2><p data-i18n="home.privacy.p">Learn what information Octobo processes and how you can control your data.</p></a>
+        <a class="card" href="./support/"><h2 data-i18n="home.support.h">Support</h2><p data-i18n="home.support.p">Contact us about accounts, study progress, subscriptions, bugs, privacy, or feedback.</p></a>
+        <a class="card" href="./terms/"><h2 data-i18n="home.terms.h">Terms of Use</h2><p data-i18n="home.terms.p">Read the straightforward terms for using Octobo.</p></a>
       </section>
     </main>
-    <footer><span>© 2026 Octobo</span><div class="footer-links"><a href="./privacy/">Privacy</a><a href="./support/">Support</a><a href="./terms/">Terms</a></div></footer>
+    <footer><span>© 2026 Octobo</span><div class="footer-links"><a href="./privacy/" data-i18n="nav.privacy">Privacy</a><a href="./support/" data-i18n="nav.support">Support</a><a href="./terms/" data-i18n="nav.terms">Terms</a></div></footer>
   </div>
+  <script src="./i18n.js"></script>
 </body>
 </html>

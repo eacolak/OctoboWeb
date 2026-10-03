@@ -174,3 +174,36 @@ footer {
 @media (prefers-reduced-motion: reduce) {
   * { scroll-behavior: auto !important; }
 }
+
+.header-end { display: flex; align-items: center; gap: 22px; }
+.lang select {
+  height: 36px;
+  padding: 0 30px 0 12px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--card) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%23617585' stroke-width='1.6'/%3E%3C/svg%3E") no-repeat right 11px center;
+  color: var(--ink);
+  font: inherit;
+  font-size: 14px;
+  font-weight: 650;
+  appearance: none;
+  cursor: pointer;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* Tight Latin tracking reads cramped in CJK scripts. */
+:lang(ja) h1, :lang(ko) h1 { letter-spacing: -.02em; line-height: 1.15; }
+:lang(ja) h1 { line-break: strict; }
+:lang(ko) h1, :lang(ko) p { word-break: keep-all; }
+
+@media (max-width: 700px) {
+  header { flex-wrap: wrap; gap: 10px; padding: 14px 0; }
+  .header-end { gap: 12px; flex-wrap: wrap; }
+}
