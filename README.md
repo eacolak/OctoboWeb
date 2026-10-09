@@ -2,8 +2,9 @@
 
 Static marketing site for Octobo: landing page plus privacy, terms and support pages, in six languages.
 
-## Cloudflare Pages
+## Cloudflare Workers
 
-- Framework preset: None
+Deployed as a static-assets Worker (`wrangler.jsonc`). Every push to `main` redeploys.
+
 - Build command: (leave empty)
-- Build output directory: `/`
+- Deploy command: `npx wrangler deploy`
