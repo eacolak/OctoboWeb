@@ -1,40 +1,129 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="How Octobo handles account, learning, quiz, subscription, analytics, and support data." data-i18n-content="privacy.desc">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Privacy Policy — Octobo</title>
-  <link rel="stylesheet" href="../styles.css">
+  <meta name="description" content="How Octobo handles account, learning, quiz, subscription, analytics, and support data." data-i18n-content="privacy.desc">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="color-scheme" content="light">
+  <link rel="icon" href="../assets/img/icon.png">
+  <link rel="apple-touch-icon" href="../assets/img/icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="../assets/styles.css">
 </head>
 <body data-title-key="privacy.title">
-  <div class="shell">
-    <header>
-      <a class="brand" href="../"><img class="brand-mark" src="../assets/octobo-icon.png" alt="" width="32" height="32">Octobo</a>
-      <div class="header-end">
-        <nav><a href="../privacy/" data-i18n="nav.privacy">Privacy</a><a href="../support/" data-i18n="nav.support">Support</a><a href="../terms/" data-i18n="nav.terms">Terms</a></nav>
-        <label class="lang"><span class="visually-hidden" data-i18n="lang.label">Language</span><select id="lang-picker" aria-label="Language"></select></label>
+
+  <header class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="../index.html"><img src="../assets/img/icon.png" alt="" width="36" height="36">octobo</a>
+      <nav class="nav-links" aria-label="Main">
+        <a href="../index.html#features" data-i18n="nav.features">Features</a>
+        <a href="../index.html#pricing" data-i18n="nav.pricing">Pricing</a>
+        <a href="../privacy/index.html" data-i18n="nav.privacy" aria-current="page">Privacy</a>
+        <a href="../terms/index.html" data-i18n="nav.terms">Terms</a>
+        <a href="../support/index.html" data-i18n="nav.support">Support</a>
+      </nav>
+      <div class="nav-end">
+        <label><span class="visually-hidden" data-i18n="lang.label">Language</span><select class="lang-select lang-picker" aria-label="Language" data-i18n-label="lang.label"></select></label>
+        <a class="btn btn-primary nav-cta" href="https://apps.apple.com/app/id6791548412" data-i18n="nav.getapp">Get the app</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-label="Menu" data-i18n-label="nav.menu"><span></span><span></span><span></span></button>
       </div>
-    </header>
-    <main>
-      <div class="eyebrow" data-i18n="privacy.eyebrow">Privacy</div>
-      <h1 data-i18n="privacy.h1">Privacy Policy</h1>
-      <p class="lede" data-i18n="privacy.lede">This policy explains the information Octobo processes, how it is used, and the controls available to you.</p>
-      <p class="updated" data-i18n="privacy.updated">Last updated October 3, 2026</p>
-      <article class="document">
-        <section><h2 data-i18n="p.s1.h">Information we process</h2><p data-i18n="p.s1.p1">Octobo processes your account identifier, name, and email through Firebase Authentication, including when you sign in with Apple or Google. Your learning preferences, selected packs, streaks, quiz history, and word progress are stored through SwiftData on your device and Firebase Firestore for syncing and restoration.</p><p data-i18n="p.s1.p2">Octobo also processes notification preferences stored on your device, support messages and word reports you submit, pseudonymous app-instance identifiers, app events, device and operating-system details, and crash diagnostics through Firebase Analytics and Crashlytics.</p></section>
-        <section><h2 data-i18n="p.s2.h">How we use information</h2><p data-i18n="p.s2.p">We use this information to sign you in, sync and restore learning progress, schedule reminders you choose, run quizzes with friends, check Octobo Plus access, improve reliability, respond to support requests, and understand aggregate feature usage.</p></section>
-        <section><h2 data-i18n="p.s3.h">Quizzes with friends</h2><p data-i18n="p.s3.p">When you create or join a quiz room, other players in that room see your display name, avatar, score, and ranking. After you finish a game, your display name, avatar, and total quiz points appear on a leaderboard that signed-in Octobo users can see.</p></section>
-        <section><h2 data-i18n="p.s4.h">Support requests</h2><p data-i18n="p.s4.p">Support messages, suggestions, and word reports are stored with your account identifier, app version, device model, language, time zone, and a summary of your study progress so we can answer them and fix problems.</p></section>
-        <section><h2 data-i18n="p.s5.h">Service providers and sharing</h2><p data-i18n="p.s5.p1">We use Google Firebase as a service provider for authentication, cloud storage, analytics, and crash diagnostics. Octobo does not sell personal information, display third-party advertising, or use your data for cross-app tracking.</p><p data-i18n="p.s5.p2">We share your account identifier and purchase status with RevenueCat to check and restore Octobo Plus access. Apple processes payments; Octobo does not receive your payment card details.</p></section>
-        <section><h2 data-i18n="p.s6.h">Your choices</h2><p data-i18n="p.s6.p">You can disable reminders in Settings, submit word-correction and support requests, and permanently delete your account and associated learning data from Profile → Settings → Account → Delete account.</p></section>
-        <section><h2 data-i18n="p.s7.h">Data retention and deletion</h2><p data-i18n="p.s7.p1">Account and learning data is retained while your account exists. Support and correction requests may be retained as needed to resolve the request, prevent abuse, and document corrections. Deleting your account removes your synced learning data, leaderboard entry, sign-in account (including Sign in with Apple authorization), pending study reminders, and local progress. Account deletion requires a network connection and cannot be undone.</p><p data-i18n="p.s7.p2">Deleting your account does not cancel an Octobo Plus subscription. Manage or cancel it in your Apple account settings.</p></section>
-        <section><h2 data-i18n="p.s8.h">Children</h2><p data-i18n="p.s8.p">Octobo is not directed to children under 13. Do not create an account if local law requires parental consent and you do not have it.</p></section>
-        <section><h2 data-i18n="p.s9.h">Changes and questions</h2><p data-i18n="p.s9.p">Material updates will be reflected on this page and in the app. For a privacy question or deletion issue, email <a href="mailto:ea.colak0@gmail.com">ea.colak0@gmail.com</a> or visit <a href="../support/">Octobo Support</a>.</p></section>
+    </div>
+    <div class="mobile-menu">
+      <a href="../index.html" data-i18n="nav.home">Home</a>
+      <a href="../index.html#features" data-i18n="nav.features">Features</a>
+      <a href="../index.html#pricing" data-i18n="nav.pricing">Pricing</a>
+      <a href="../privacy/index.html" data-i18n="nav.privacy" aria-current="page">Privacy</a>
+      <a href="../terms/index.html" data-i18n="nav.terms">Terms</a>
+      <a href="../support/index.html" data-i18n="nav.support">Support</a>
+      <select class="lang-select lang-picker" aria-label="Language" data-i18n-label="lang.label"></select>
+      <a class="btn btn-primary" href="https://apps.apple.com/app/id6791548412" data-i18n="nav.getapp">Get the app</a>
+    </div>
+  </header>
+
+  <main>
+    <div class="frame compact">
+      <section class="page-hero">
+        <h1 class="" data-i18n="privacy.h1">Privacy Policy</h1>
+        <p class="lede" data-i18n="privacy.lede">This policy explains the information Octobo processes, how it is used, and the controls available to you.</p>
+        <span class="updated" data-i18n="privacy.updated">Last updated October 3, 2026</span>
+      </section>
+    </div>
+
+    <div class="shell legal-grid">
+      <aside class="toc">
+        <h4 data-i18n="legal.toc">On this page</h4>
+        <ol>
+          <li><a href="#s1" data-i18n="p.s1.h">Information we process</a></li>
+          <li><a href="#s2" data-i18n="p.s2.h">How we use information</a></li>
+          <li><a href="#s3" data-i18n="p.s3.h">Quizzes with friends</a></li>
+          <li><a href="#s4" data-i18n="p.s4.h">Support requests</a></li>
+          <li><a href="#s5" data-i18n="p.s5.h">Service providers and sharing</a></li>
+          <li><a href="#s6" data-i18n="p.s6.h">Your choices</a></li>
+          <li><a href="#s7" data-i18n="p.s7.h">Data retention and deletion</a></li>
+          <li><a href="#s8" data-i18n="p.s8.h">Children</a></li>
+          <li><a href="#s9" data-i18n="p.s9.h">Changes and questions</a></li>
+        </ol>
+      </aside>
+      <article class="doc">
+        <section id="s1"><h2 data-i18n="p.s1.h">Information we process</h2><p data-i18n="p.s1.p1">Octobo processes your account identifier, name, and email through Firebase Authentication, including when you sign in with Apple or Google. Your learning preferences, selected packs, streaks, quiz history, and word progress are stored through SwiftData on your device and Firebase Firestore for syncing and restoration.</p><p data-i18n="p.s1.p2">Octobo also processes notification preferences stored on your device, support messages and word reports you submit, pseudonymous app-instance identifiers, app events, device and operating-system details, and crash diagnostics through Firebase Analytics and Crashlytics.</p></section>
+        <section id="s2"><h2 data-i18n="p.s2.h">How we use information</h2><p data-i18n="p.s2.p">We use this information to sign you in, sync and restore learning progress, schedule reminders you choose, run quizzes with friends, check Octobo Plus access, improve reliability, respond to support requests, and understand aggregate feature usage.</p></section>
+        <section id="s3"><h2 data-i18n="p.s3.h">Quizzes with friends</h2><p data-i18n="p.s3.p">When you create or join a quiz room, other players in that room see your display name, avatar, score, and ranking. After you finish a game, your display name, avatar, and total quiz points appear on a leaderboard that signed-in Octobo users can see.</p></section>
+        <section id="s4"><h2 data-i18n="p.s4.h">Support requests</h2><p data-i18n="p.s4.p">Support messages, suggestions, and word reports are stored with your account identifier, app version, device model, language, time zone, and a summary of your study progress so we can answer them and fix problems.</p></section>
+        <section id="s5"><h2 data-i18n="p.s5.h">Service providers and sharing</h2><p data-i18n="p.s5.p1">We use Google Firebase as a service provider for authentication, cloud storage, analytics, and crash diagnostics. Octobo does not sell personal information, display third-party advertising, or use your data for cross-app tracking.</p><p data-i18n="p.s5.p2">We share your account identifier and purchase status with RevenueCat to check and restore Octobo Plus access. Apple processes payments; Octobo does not receive your payment card details.</p></section>
+        <section id="s6"><h2 data-i18n="p.s6.h">Your choices</h2><p data-i18n="p.s6.p">You can disable reminders in Settings, submit word-correction and support requests, and permanently delete your account and associated learning data from Profile → Settings → Account → Delete account.</p></section>
+        <section id="s7"><h2 data-i18n="p.s7.h">Data retention and deletion</h2><p data-i18n="p.s7.p1">Account and learning data is retained while your account exists. Support and correction requests may be retained as needed to resolve the request, prevent abuse, and document corrections. Deleting your account removes your synced learning data, leaderboard entry, sign-in account (including Sign in with Apple authorization), pending study reminders, and local progress. Account deletion requires a network connection and cannot be undone.</p><p data-i18n="p.s7.p2">Deleting your account does not cancel an Octobo Plus subscription. Manage or cancel it in your Apple account settings.</p></section>
+        <section id="s8"><h2 data-i18n="p.s8.h">Children</h2><p data-i18n="p.s8.p">Octobo is not directed to children under 13. Do not create an account if local law requires parental consent and you do not have it.</p></section>
+        <section id="s9"><h2 data-i18n="p.s9.h">Changes and questions</h2><p data-i18n="p.s9.p">Material updates will be reflected on this page and in the app. For a privacy question or deletion issue, email <a href="mailto:ea.colak0@gmail.com">ea.colak0@gmail.com</a> or visit <a href="../support/index.html">Octobo Support</a>.</p></section>
       </article>
-    </main>
-    <footer><span>© 2026 Octobo</span><div class="footer-links"><a href="../privacy/" data-i18n="nav.privacy">Privacy</a><a href="../support/" data-i18n="nav.support">Support</a><a href="../terms/" data-i18n="nav.terms">Terms</a></div></footer>
-  </div>
-  <script src="../i18n.js"></script>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="shell">
+      <div class="foot-grid">
+        <div>
+          <a class="brand" href="../index.html"><img src="../assets/img/icon.png" alt="" width="36" height="36">octobo</a>
+          <p data-i18n="foot.tagline">English vocabulary, one day at a time.</p>
+        </div>
+        <div>
+          <h4 data-i18n="foot.product">Product</h4>
+          <ul>
+            <li><a href="../index.html#features" data-i18n="nav.features">Features</a></li>
+            <li><a href="../index.html#how" data-i18n="nav.how">How it works</a></li>
+            <li><a href="../index.html#pricing" data-i18n="nav.pricing">Pricing</a></li>
+            <li><a href="../index.html#faq" data-i18n="nav.faq">FAQ</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 data-i18n="foot.legal">Legal</h4>
+          <ul>
+            <li><a href="../privacy/index.html" data-i18n="nav.privacy">Privacy</a></li>
+            <li><a href="../terms/index.html" data-i18n="nav.terms">Terms</a></li>
+            <li><a href="../support/index.html" data-i18n="nav.support">Support</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 data-i18n="foot.contact">Contact</h4>
+          <ul>
+            <li><a href="mailto:ea.colak0@gmail.com">ea.colak0@gmail.com</a></li>
+            <li><a href="https://apps.apple.com/app/id6791548412">App Store</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="foot-bottom">
+        <p>© <span data-year>2026</span> Octobo. <span data-i18n="foot.rights">All rights reserved.</span></p>
+        <p data-i18n="foot.disclaimer">SAT is a trademark of College Board. IELTS is jointly owned by the British Council, IDP: IELTS Australia and Cambridge University Press &amp; Assessment. Octobo is not affiliated with or endorsed by these organizations.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/strings.js"></script>
+  <script src="../assets/pack-strings.js"></script>
+  <script src="../assets/i18n.js"></script>
+  <script src="../assets/site.js"></script>
 </body>
 </html>

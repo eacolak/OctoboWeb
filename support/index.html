@@ -1,41 +1,144 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Contact Octobo support for account, study progress, subscription, bug, privacy, and feedback questions." data-i18n-content="support.desc">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Support — Octobo</title>
-  <link rel="stylesheet" href="../styles.css">
+  <meta name="description" content="Contact Octobo support for account, study progress, subscription, bug, privacy, and feedback questions." data-i18n-content="support.desc">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="color-scheme" content="light">
+  <link rel="icon" href="../assets/img/icon.png">
+  <link rel="apple-touch-icon" href="../assets/img/icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="../assets/styles.css">
 </head>
 <body data-title-key="support.title">
-  <div class="shell">
-    <header>
-      <a class="brand" href="../"><img class="brand-mark" src="../assets/octobo-icon.png" alt="" width="32" height="32">Octobo</a>
-      <div class="header-end">
-        <nav><a href="../privacy/" data-i18n="nav.privacy">Privacy</a><a href="../support/" data-i18n="nav.support">Support</a><a href="../terms/" data-i18n="nav.terms">Terms</a></nav>
-        <label class="lang"><span class="visually-hidden" data-i18n="lang.label">Language</span><select id="lang-picker" aria-label="Language"></select></label>
+
+  <header class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="../index.html"><img src="../assets/img/icon.png" alt="" width="36" height="36">octobo</a>
+      <nav class="nav-links" aria-label="Main">
+        <a href="../index.html#features" data-i18n="nav.features">Features</a>
+        <a href="../index.html#pricing" data-i18n="nav.pricing">Pricing</a>
+        <a href="../privacy/index.html" data-i18n="nav.privacy">Privacy</a>
+        <a href="../terms/index.html" data-i18n="nav.terms">Terms</a>
+        <a href="../support/index.html" data-i18n="nav.support" aria-current="page">Support</a>
+      </nav>
+      <div class="nav-end">
+        <label><span class="visually-hidden" data-i18n="lang.label">Language</span><select class="lang-select lang-picker" aria-label="Language" data-i18n-label="lang.label"></select></label>
+        <a class="btn btn-primary nav-cta" href="https://apps.apple.com/app/id6791548412" data-i18n="nav.getapp">Get the app</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-label="Menu" data-i18n-label="nav.menu"><span></span><span></span><span></span></button>
       </div>
-    </header>
-    <main>
-      <div class="eyebrow" data-i18n="support.eyebrow">Help center</div>
-      <h1 data-i18n="support.h1">How can we help?</h1>
-      <p class="lede" data-i18n="support.lede">Contact us about account access, study progress, subscriptions, bugs, privacy questions, general feedback, or feature requests.</p>
-      <section class="support-box">
-        <h2 data-i18n="support.box.h">Email Octobo Support</h2>
-        <a class="support-email" href="mailto:ea.colak0@gmail.com">ea.colak0@gmail.com</a>
-        <p data-i18n="support.box.p1">Include the screen name, what you expected, and what happened. Please do not include passwords, verification codes, or payment details.</p>
-        <p data-i18n="support.box.p2">You can also contact us inside Octobo from <strong>Profile → Settings → About &amp; Support → Support &amp; Suggestions</strong>.</p>
+    </div>
+    <div class="mobile-menu">
+      <a href="../index.html" data-i18n="nav.home">Home</a>
+      <a href="../index.html#features" data-i18n="nav.features">Features</a>
+      <a href="../index.html#pricing" data-i18n="nav.pricing">Pricing</a>
+      <a href="../privacy/index.html" data-i18n="nav.privacy">Privacy</a>
+      <a href="../terms/index.html" data-i18n="nav.terms">Terms</a>
+      <a href="../support/index.html" data-i18n="nav.support" aria-current="page">Support</a>
+      <select class="lang-select lang-picker" aria-label="Language" data-i18n-label="lang.label"></select>
+      <a class="btn btn-primary" href="https://apps.apple.com/app/id6791548412" data-i18n="nav.getapp">Get the app</a>
+    </div>
+  </header>
+
+  <main>
+    <div class="frame compact">
+      <section class="page-hero">
+        <h1 class="" data-i18n="support.h1">How can we help?</h1>
+        <p class="lede" data-i18n="support.lede">Contact us about account access, study progress, subscriptions, bugs, privacy questions, general feedback, or feature requests.</p>
       </section>
-      <section class="cards" aria-label="Support topics">
-        <div class="card"><h2 data-i18n="support.c1.h">Account access</h2><p data-i18n="support.c1.p">Sign-in, verification, password, or account deletion help.</p></div>
-        <div class="card"><h2 data-i18n="support.c2.h">Study progress</h2><p data-i18n="support.c2.p">Questions about packs, streaks, quizzes, or synced progress.</p></div>
-        <div class="card"><h2 data-i18n="support.c3.h">Octobo Plus</h2><p data-i18n="support.c3.p">Free trial, restoring purchases, or managing your subscription in Apple account settings.</p></div>
-        <div class="card"><h2 data-i18n="support.c4.h">Report a bug</h2><p data-i18n="support.c4.p">Tell us what happened and which screen you were using.</p></div>
-        <div class="card"><h2 data-i18n="support.c5.h">Privacy</h2><p data-i18n="support.c5.p">Questions about your data, retention, or deletion.</p></div>
+    </div>
+
+    <div class="shell support-grid">
+      <section class="mail-card">
+        <div>
+          <h2 data-i18n="support.box.h">Email Octobo Support</h2>
+          <a class="mail" href="mailto:ea.colak0@gmail.com">ea.colak0@gmail.com</a>
+          <p data-i18n="support.box.p1">Include the screen name, what you expected, and what happened. Please do not include passwords, verification codes, or payment details.</p>
+          <p data-i18n="support.box.p2">You can also contact us inside Octobo from <strong>Profile → Settings → About &amp; Support → Support &amp; Suggestions</strong>.</p>
+        </div>
+        <span class="mail-art" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m3 6 9 7 9-7"/></svg></span>
       </section>
-    </main>
-    <footer><span>© 2026 Octobo</span><div class="footer-links"><a href="../privacy/" data-i18n="nav.privacy">Privacy</a><a href="../support/" data-i18n="nav.support">Support</a><a href="../terms/" data-i18n="nav.terms">Terms</a></div></footer>
-  </div>
-  <script src="../i18n.js"></script>
+      <section class="topics" aria-label="Support topics">
+        <div class="topic" style="--tint:var(--sky-soft);--c:var(--sky)">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></svg></span>
+          <h2 data-i18n="support.c1.h">Account access</h2>
+          <p data-i18n="support.c1.p">Sign-in, verification, password, or account deletion help.</p>
+        </div>
+        <div class="topic" style="--tint:var(--turquoise-soft);--c:var(--turquoise)">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19V9M10 19V5M16 19v-7M22 19H2"/></svg></span>
+          <h2 data-i18n="support.c2.h">Study progress</h2>
+          <p data-i18n="support.c2.p">Questions about packs, streaks, quizzes, or synced progress.</p>
+        </div>
+        <div class="topic" style="--tint:var(--orange-soft);--c:var(--orange)">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l2.6 6.3L21 9l-5 4.4L17.5 20 12 16.6 6.5 20 8 13.4 3 9l6.4-.7z"/></svg></span>
+          <h2 data-i18n="support.c3.h">Octobo Plus</h2>
+          <p data-i18n="support.c3.p">Free trial, restoring purchases, or managing your subscription in Apple account settings.</p>
+        </div>
+        <div class="topic" style="--tint:rgba(255,96,90,.12);--c:var(--red)">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 6V4a4 4 0 0 1 8 0v2M6 10h12v4a6 6 0 0 1-12 0zM2 13h4M18 13h4M3 7l3 3M21 7l-3 3M4 20l3-2M20 20l-3-2"/></svg></span>
+          <h2 data-i18n="support.c4.h">Report a bug</h2>
+          <p data-i18n="support.c4.p">Tell us what happened and which screen you were using.</p>
+        </div>
+        <div class="topic" style="--tint:var(--indigo-soft);--c:var(--indigo)">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></span>
+          <h2 data-i18n="support.c5.h">Privacy</h2>
+          <p data-i18n="support.c5.p">Questions about your data, retention, or deletion.</p>
+        </div>
+        <div class="topic faq-link">
+          <h2 data-i18n="support.faq.h">Looking for a quick answer?</h2>
+          <p data-i18n="support.faq.p">See the most common questions about Octobo Plus, syncing and your account.</p>
+          <a class="btn" href="../index.html#faq" data-i18n="support.faq.cta">Read the FAQ</a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="shell">
+      <div class="foot-grid">
+        <div>
+          <a class="brand" href="../index.html"><img src="../assets/img/icon.png" alt="" width="36" height="36">octobo</a>
+          <p data-i18n="foot.tagline">English vocabulary, one day at a time.</p>
+        </div>
+        <div>
+          <h4 data-i18n="foot.product">Product</h4>
+          <ul>
+            <li><a href="../index.html#features" data-i18n="nav.features">Features</a></li>
+            <li><a href="../index.html#how" data-i18n="nav.how">How it works</a></li>
+            <li><a href="../index.html#pricing" data-i18n="nav.pricing">Pricing</a></li>
+            <li><a href="../index.html#faq" data-i18n="nav.faq">FAQ</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 data-i18n="foot.legal">Legal</h4>
+          <ul>
+            <li><a href="../privacy/index.html" data-i18n="nav.privacy">Privacy</a></li>
+            <li><a href="../terms/index.html" data-i18n="nav.terms">Terms</a></li>
+            <li><a href="../support/index.html" data-i18n="nav.support">Support</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 data-i18n="foot.contact">Contact</h4>
+          <ul>
+            <li><a href="mailto:ea.colak0@gmail.com">ea.colak0@gmail.com</a></li>
+            <li><a href="https://apps.apple.com/app/id6791548412">App Store</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="foot-bottom">
+        <p>© <span data-year>2026</span> Octobo. <span data-i18n="foot.rights">All rights reserved.</span></p>
+        <p data-i18n="foot.disclaimer">SAT is a trademark of College Board. IELTS is jointly owned by the British Council, IDP: IELTS Australia and Cambridge University Press &amp; Assessment. Octobo is not affiliated with or endorsed by these organizations.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/strings.js"></script>
+  <script src="../assets/pack-strings.js"></script>
+  <script src="../assets/i18n.js"></script>
+  <script src="../assets/site.js"></script>
 </body>
 </html>

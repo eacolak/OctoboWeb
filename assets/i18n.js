@@ -1,6 +1,6 @@
-// One page per document; copy switches by ?lang=, then saved choice, then browser language.
+// Legal copy is carried over from octobo-legal; landing copy lives in strings.js and pack names in pack-strings.js.
+// Copy switches by ?lang=, then saved choice, then browser language.
 (function () {
-  const MAIL = '<a href="mailto:ea.colak0@gmail.com">ea.colak0@gmail.com</a>';
   const LANGUAGES = [
     ["en", "English"],
     ["es", "Español"],
@@ -9,6 +9,7 @@
     ["pt-BR", "Português (Brasil)"],
     ["ja", "日本語"],
   ];
+  const MAIL = '<a href="mailto:ea.colak0@gmail.com">ea.colak0@gmail.com</a>';
 
   const T = {
     en: {
@@ -40,7 +41,7 @@
       "p.s4.p": "Support messages, suggestions, and word reports are stored with your account identifier, app version, device model, language, time zone, and a summary of your study progress so we can answer them and fix problems.",
       "p.s5.h": "Service providers and sharing",
       "p.s5.p1": "We use Google Firebase as a service provider for authentication, cloud storage, analytics, and crash diagnostics. Octobo does not sell personal information, display third-party advertising, or use your data for cross-app tracking.",
-      "p.s5.p2": "We share your account identifier and purchase status with RevenueCat to check and restore Octobo Plus access. Apple processes payments; Octobo does not receive your payment card details.",
+      "p.s5.p2": "We share your account identifier and purchase status with RevenueCat to check and restore Octobo Plus access. Apple processes payments; Octobo does not receive your payment card details. RevenueCat sends subscription events and your account identifier to PostHog; the app sends paywall and purchase flow events to PostHog for analytics.",
       "p.s6.h": "Your choices",
       "p.s6.p": "You can disable reminders in Settings, submit word-correction and support requests, and permanently delete your account and associated learning data from Profile → Settings → Account → Delete account.",
       "p.s7.h": "Data retention and deletion",
@@ -49,7 +50,7 @@
       "p.s8.h": "Children",
       "p.s8.p": "Octobo is not directed to children under 13. Do not create an account if local law requires parental consent and you do not have it.",
       "p.s9.h": "Changes and questions",
-      "p.s9.p": `Material updates will be reflected on this page and in the app. For a privacy question or deletion issue, email ${MAIL} or visit <a href="../support/">Octobo Support</a>.`,
+      "p.s9.p": `Material updates will be reflected on this page and in the app. For a privacy question or deletion issue, email ${MAIL} or visit <a href="../support/index.html">Octobo Support</a>.`,
 
       "support.title": "Support — Octobo",
       "support.desc": "Contact Octobo support for account, study progress, subscription, bug, privacy, and feedback questions.",
@@ -76,7 +77,7 @@
       "t.s5.h": "Octobo Plus", "t.s5.p": "Two word packs are free and Octobo Plus unlocks all of them. Eligible new members can start with a 7-day free trial, which becomes a paid subscription unless canceled at least 24 hours before it ends. Monthly and yearly subscriptions renew automatically at the price shown by Apple until canceled. Manage or cancel your subscription in Apple account settings. You can restore purchases in the app.",
       "t.s6.h": "Availability and accounts", "t.s6.p": "Features may change and online services may occasionally be unavailable. You may delete your account from Settings at any time. We may restrict accounts used to abuse the service or other users.",
       "t.s7.h": "Trademarks", "t.s7.p": "SAT is a trademark of College Board. IELTS is jointly owned by the British Council, IDP: IELTS Australia, and Cambridge University Press &amp; Assessment. Octobo is not affiliated with or endorsed by these organizations.",
-      "t.s8.h": "Questions", "t.s8.p": `For questions about these terms, email ${MAIL} or visit <a href="../support/">Octobo Support</a>.`,
+      "t.s8.h": "Questions", "t.s8.p": `For questions about these terms, email ${MAIL} or visit <a href="../support/index.html">Octobo Support</a>.`,
     },
 
     es: {
@@ -108,7 +109,7 @@
       "p.s4.p": "Los mensajes de soporte, las sugerencias y los reportes de palabras se guardan con el identificador de tu cuenta, la versión de la app, el modelo del dispositivo, el idioma, la zona horaria y un resumen de tu progreso de estudio para poder responderlos y solucionar problemas.",
       "p.s5.h": "Proveedores de servicios y datos compartidos",
       "p.s5.p1": "Usamos Google Firebase como proveedor de servicios de autenticación, almacenamiento en la nube, análisis y diagnóstico de fallos. Octobo no vende información personal, no muestra publicidad de terceros ni usa tus datos para el seguimiento entre apps.",
-      "p.s5.p2": "Compartimos el identificador de tu cuenta y el estado de tus compras con RevenueCat para verificar y restaurar el acceso a Octobo Plus. Apple procesa los pagos; Octobo no recibe los datos de tu tarjeta.",
+      "p.s5.p2": "Compartimos el identificador de tu cuenta y el estado de tus compras con RevenueCat para verificar y restaurar el acceso a Octobo Plus. Apple procesa los pagos; Octobo no recibe los datos de tu tarjeta. RevenueCat envía a PostHog eventos de suscripción y el identificador de tu cuenta; la app envía eventos del muro de pago y del proceso de compra para análisis.",
       "p.s6.h": "Tus opciones",
       "p.s6.p": "Puedes desactivar los recordatorios en Ajustes, enviar solicitudes de corrección y de soporte, y eliminar de forma permanente tu cuenta y los datos de aprendizaje asociados en Perfil → Ajustes → Cuenta → Eliminar cuenta.",
       "p.s7.h": "Conservación y eliminación de datos",
@@ -117,7 +118,7 @@
       "p.s8.h": "Menores",
       "p.s8.p": "Octobo no está dirigido a menores de 13 años. No crees una cuenta si la ley local exige el consentimiento de tus padres y no lo tienes.",
       "p.s9.h": "Cambios y preguntas",
-      "p.s9.p": `Los cambios importantes se reflejarán en esta página y en la app. Para preguntas sobre privacidad o problemas con la eliminación, escribe a ${MAIL} o visita <a href="../support/">la ayuda de Octobo</a>.`,
+      "p.s9.p": `Los cambios importantes se reflejarán en esta página y en la app. Para preguntas sobre privacidad o problemas con la eliminación, escribe a ${MAIL} o visita <a href="../support/index.html">la ayuda de Octobo</a>.`,
 
       "support.title": "Ayuda — Octobo",
       "support.desc": "Contacta con la ayuda de Octobo para dudas sobre la cuenta, el progreso, las suscripciones, errores, privacidad y sugerencias.",
@@ -144,7 +145,7 @@
       "t.s5.h": "Octobo Plus", "t.s5.p": "Dos paquetes de palabras son gratis y Octobo Plus los desbloquea todos. Los nuevos miembros que cumplan los requisitos pueden empezar con una prueba gratuita de 7 días, que se convierte en una suscripción de pago si no se cancela al menos 24 horas antes de que termine. Las suscripciones mensuales y anuales se renuevan automáticamente al precio que muestra Apple hasta que se cancelen. Gestiona o cancela tu suscripción en los ajustes de tu cuenta de Apple. Puedes restaurar las compras en la app.",
       "t.s6.h": "Disponibilidad y cuentas", "t.s6.p": "Las funciones pueden cambiar y los servicios en línea pueden no estar disponibles en ocasiones. Puedes eliminar tu cuenta desde Ajustes en cualquier momento. Podemos restringir las cuentas que se usen para abusar del servicio o de otros usuarios.",
       "t.s7.h": "Marcas", "t.s7.p": "SAT es una marca registrada de College Board. IELTS es propiedad conjunta del British Council, IDP: IELTS Australia y Cambridge University Press &amp; Assessment. Octobo no está afiliado a estas organizaciones ni cuenta con su respaldo.",
-      "t.s8.h": "Preguntas", "t.s8.p": `Para preguntas sobre estas condiciones, escribe a ${MAIL} o visita <a href="../support/">la ayuda de Octobo</a>.`,
+      "t.s8.h": "Preguntas", "t.s8.p": `Para preguntas sobre estas condiciones, escribe a ${MAIL} o visita <a href="../support/index.html">la ayuda de Octobo</a>.`,
     },
 
     tr: {
@@ -176,7 +177,7 @@
       "p.s4.p": "Destek mesajları, öneriler ve kelime bildirimleri; yanıt verebilmemiz ve sorunları çözebilmemiz için hesap kimliğin, uygulama sürümü, cihaz modeli, dil, saat dilimi ve çalışma ilerlemenin bir özetiyle birlikte saklanır.",
       "p.s5.h": "Hizmet sağlayıcılar ve paylaşım",
       "p.s5.p1": "Kimlik doğrulama, bulut depolama, analiz ve çökme tanılama için hizmet sağlayıcı olarak Google Firebase'i kullanıyoruz. Octobo kişisel bilgileri satmaz, üçüncü taraf reklam göstermez ve verilerini uygulamalar arası izleme için kullanmaz.",
-      "p.s5.p2": "Octobo Plus erişimini doğrulamak ve geri yüklemek için hesap kimliğini ve satın alma durumunu RevenueCat ile paylaşırız. Ödemeleri Apple işler; Octobo kart bilgilerini almaz.",
+      "p.s5.p2": "Octobo Plus erişimini doğrulamak ve geri yüklemek için hesap kimliğini ve satın alma durumunu RevenueCat ile paylaşırız. Ödemeleri Apple işler; Octobo kart bilgilerini almaz. RevenueCat abonelik olaylarını ve hesap kimliğini PostHog’a gönderir; uygulama da analiz için ödeme ekranı ve satın alma akışı olaylarını PostHog’a gönderir.",
       "p.s6.h": "Seçimlerin",
       "p.s6.p": "Hatırlatıcıları Ayarlar'dan kapatabilir, kelime düzeltme ve destek talepleri gönderebilir, hesabını ve ilişkili öğrenme verilerini Profil → Ayarlar → Hesap → Hesabı sil yolundan kalıcı olarak silebilirsin.",
       "p.s7.h": "Verilerin saklanması ve silinmesi",
@@ -185,7 +186,7 @@
       "p.s8.h": "Çocuklar",
       "p.s8.p": "Octobo 13 yaşından küçük çocuklara yönelik değildir. Yerel yasalar ebeveyn izni gerektiriyorsa ve bu iznin yoksa hesap oluşturma.",
       "p.s9.h": "Değişiklikler ve sorular",
-      "p.s9.p": `Önemli değişiklikler bu sayfaya ve uygulamaya yansıtılır. Gizlilik soruların veya silme sorunların için ${MAIL} adresine yaz ya da <a href="../support/">Octobo Destek</a> sayfasını ziyaret et.`,
+      "p.s9.p": `Önemli değişiklikler bu sayfaya ve uygulamaya yansıtılır. Gizlilik soruların veya silme sorunların için ${MAIL} adresine yaz ya da <a href="../support/index.html">Octobo Destek</a> sayfasını ziyaret et.`,
 
       "support.title": "Destek — Octobo",
       "support.desc": "Hesap, çalışma ilerlemesi, abonelik, hata, gizlilik ve geri bildirim soruları için Octobo desteğine ulaş.",
@@ -212,7 +213,7 @@
       "t.s5.h": "Octobo Plus", "t.s5.p": "İki kelime paketi ücretsizdir ve Octobo Plus tüm paketlerin kilidini açar. Uygun yeni üyeler 7 günlük ücretsiz denemeyle başlayabilir; deneme, bitiminden en az 24 saat önce iptal edilmezse ücretli aboneliğe dönüşür. Aylık ve yıllık abonelikler iptal edilene kadar Apple'ın gösterdiği fiyattan otomatik olarak yenilenir. Aboneliğini Apple hesap ayarlarından yönetebilir veya iptal edebilirsin. Satın alımlarını uygulama içinden geri yükleyebilirsin.",
       "t.s6.h": "Erişilebilirlik ve hesaplar", "t.s6.p": "Özellikler değişebilir ve çevrim içi hizmetler zaman zaman kullanılamayabilir. Hesabını istediğin zaman Ayarlar'dan silebilirsin. Hizmeti veya diğer kullanıcıları kötüye kullanmak için kullanılan hesapları kısıtlayabiliriz.",
       "t.s7.h": "Ticari markalar", "t.s7.p": "SAT, College Board'un ticari markasıdır. IELTS; British Council, IDP: IELTS Australia ve Cambridge University Press &amp; Assessment'ın ortak mülkiyetindedir. Octobo bu kuruluşlarla bağlantılı değildir ve onlar tarafından onaylanmamıştır.",
-      "t.s8.h": "Sorular", "t.s8.p": `Bu koşullarla ilgili soruların için ${MAIL} adresine yaz ya da <a href="../support/">Octobo Destek</a> sayfasını ziyaret et.`,
+      "t.s8.h": "Sorular", "t.s8.p": `Bu koşullarla ilgili soruların için ${MAIL} adresine yaz ya da <a href="../support/index.html">Octobo Destek</a> sayfasını ziyaret et.`,
     },
 
     ko: {
@@ -244,7 +245,7 @@
       "p.s4.p": "지원 메시지, 제안, 단어 신고는 답변하고 문제를 해결할 수 있도록 계정 식별자, 앱 버전, 기기 모델, 언어, 시간대, 학습 진행 요약과 함께 저장됩니다.",
       "p.s5.h": "서비스 제공업체 및 공유",
       "p.s5.p1": "인증, 클라우드 저장, 분석, 충돌 진단을 위해 Google Firebase를 서비스 제공업체로 이용합니다. Octobo는 개인정보를 판매하지 않으며, 제3자 광고를 표시하지 않고, 앱 간 추적에 데이터를 사용하지 않습니다.",
-      "p.s5.p2": "Octobo Plus 이용 권한을 확인하고 복원하기 위해 계정 식별자와 구매 상태를 RevenueCat과 공유합니다. 결제는 Apple이 처리하며 Octobo는 결제 카드 정보를 받지 않습니다.",
+      "p.s5.p2": "Octobo Plus 이용 권한을 확인하고 복원하기 위해 계정 식별자와 구매 상태를 RevenueCat과 공유합니다. 결제는 Apple이 처리하며 Octobo는 결제 카드 정보를 받지 않습니다. RevenueCat은 구독 이벤트와 계정 식별자를 PostHog에 전송하며, 앱은 분석을 위해 결제 화면 및 구매 과정 이벤트를 PostHog에 전송합니다.",
       "p.s6.h": "선택 사항",
       "p.s6.p": "설정에서 알림을 끄고, 단어 수정 및 지원 요청을 보내고, 프로필 → 설정 → 계정 → 계정 삭제에서 계정과 관련 학습 데이터를 영구 삭제할 수 있습니다.",
       "p.s7.h": "데이터 보관 및 삭제",
@@ -253,7 +254,7 @@
       "p.s8.h": "어린이",
       "p.s8.p": "Octobo는 만 13세 미만 어린이를 대상으로 하지 않습니다. 현지 법률상 보호자 동의가 필요한데 동의를 받지 않았다면 계정을 만들지 마세요.",
       "p.s9.h": "변경 및 문의",
-      "p.s9.p": `중요한 변경 사항은 이 페이지와 앱에 반영됩니다. 개인정보 관련 문의나 삭제 문제는 ${MAIL}로 이메일을 보내거나 <a href="../support/">Octobo 지원</a>을 방문하세요.`,
+      "p.s9.p": `중요한 변경 사항은 이 페이지와 앱에 반영됩니다. 개인정보 관련 문의나 삭제 문제는 ${MAIL}로 이메일을 보내거나 <a href="../support/index.html">Octobo 지원</a>을 방문하세요.`,
 
       "support.title": "지원 — Octobo",
       "support.desc": "계정, 학습 진행, 구독, 버그, 개인정보, 의견에 관해 Octobo 지원팀에 문의하세요.",
@@ -280,7 +281,7 @@
       "t.s5.h": "Octobo Plus", "t.s5.p": "단어 팩 2개는 무료이며 Octobo Plus로 모든 팩을 이용할 수 있습니다. 자격이 있는 신규 회원은 7일 무료 체험으로 시작할 수 있으며, 체험 종료 최소 24시간 전에 취소하지 않으면 유료 구독으로 전환됩니다. 월간 및 연간 구독은 취소할 때까지 Apple에 표시된 가격으로 자동 갱신됩니다. 구독은 Apple 계정 설정에서 관리하거나 취소할 수 있으며, 구매 항목은 앱에서 복원할 수 있습니다.",
       "t.s6.h": "서비스 제공 및 계정", "t.s6.p": "기능은 변경될 수 있으며 온라인 서비스를 일시적으로 이용하지 못할 수도 있습니다. 계정은 언제든지 설정에서 삭제할 수 있습니다. 서비스나 다른 사용자를 악용하는 데 사용된 계정은 제한될 수 있습니다.",
       "t.s7.h": "상표", "t.s7.p": "SAT는 College Board의 상표입니다. IELTS는 British Council, IDP: IELTS Australia, Cambridge University Press &amp; Assessment가 공동 소유합니다. Octobo는 이들 기관과 제휴하거나 승인받지 않았습니다.",
-      "t.s8.h": "문의", "t.s8.p": `이 약관에 관한 문의는 ${MAIL}로 이메일을 보내거나 <a href="../support/">Octobo 지원</a>을 방문하세요.`,
+      "t.s8.h": "문의", "t.s8.p": `이 약관에 관한 문의는 ${MAIL}로 이메일을 보내거나 <a href="../support/index.html">Octobo 지원</a>을 방문하세요.`,
     },
 
     "pt-BR": {
@@ -312,7 +313,7 @@
       "p.s4.p": "Mensagens de suporte, sugestões e relatos de palavras são armazenados com o identificador da sua conta, a versão do app, o modelo do dispositivo, o idioma, o fuso horário e um resumo do seu progresso de estudo, para que possamos responder e corrigir problemas.",
       "p.s5.h": "Prestadores de serviço e compartilhamento",
       "p.s5.p1": "Usamos o Google Firebase como prestador de serviços de autenticação, armazenamento em nuvem, análise e diagnóstico de falhas. O Octobo não vende informações pessoais, não exibe anúncios de terceiros e não usa seus dados para rastreamento entre apps.",
-      "p.s5.p2": "Compartilhamos o identificador da sua conta e o status de compra com a RevenueCat para verificar e restaurar o acesso ao Octobo Plus. A Apple processa os pagamentos; o Octobo não recebe os dados do seu cartão.",
+      "p.s5.p2": "Compartilhamos o identificador da sua conta e o status de compra com a RevenueCat para verificar e restaurar o acesso ao Octobo Plus. A Apple processa os pagamentos; o Octobo não recebe os dados do seu cartão. A RevenueCat envia eventos de assinatura e o identificador da conta ao PostHog; o app envia eventos da tela de assinatura e do fluxo de compra para análise.",
       "p.s6.h": "Suas escolhas",
       "p.s6.p": "Você pode desativar os lembretes nos Ajustes, enviar pedidos de correção de palavras e de suporte, e excluir permanentemente sua conta e os dados de aprendizado associados em Perfil → Ajustes → Conta → Excluir conta.",
       "p.s7.h": "Retenção e exclusão de dados",
@@ -321,7 +322,7 @@
       "p.s8.h": "Crianças",
       "p.s8.p": "O Octobo não é direcionado a menores de 13 anos. Não crie uma conta se a lei local exigir consentimento dos pais e você não o tiver.",
       "p.s9.h": "Alterações e dúvidas",
-      "p.s9.p": `Atualizações relevantes serão refletidas nesta página e no app. Para dúvidas sobre privacidade ou problemas de exclusão, envie um e-mail para ${MAIL} ou acesse o <a href="../support/">Suporte do Octobo</a>.`,
+      "p.s9.p": `Atualizações relevantes serão refletidas nesta página e no app. Para dúvidas sobre privacidade ou problemas de exclusão, envie um e-mail para ${MAIL} ou acesse o <a href="../support/index.html">Suporte do Octobo</a>.`,
 
       "support.title": "Suporte — Octobo",
       "support.desc": "Fale com o suporte do Octobo sobre conta, progresso de estudo, assinatura, bugs, privacidade e sugestões.",
@@ -348,7 +349,7 @@
       "t.s5.h": "Octobo Plus", "t.s5.p": "Dois pacotes de palavras são grátis e o Octobo Plus desbloqueia todos. Novos membros elegíveis podem começar com um teste grátis de 7 dias, que vira uma assinatura paga se não for cancelado pelo menos 24 horas antes do fim. As assinaturas mensais e anuais são renovadas automaticamente pelo preço exibido pela Apple até serem canceladas. Gerencie ou cancele sua assinatura nos ajustes da conta Apple. Você pode restaurar compras no app.",
       "t.s6.h": "Disponibilidade e contas", "t.s6.p": "Os recursos podem mudar e os serviços online podem ficar indisponíveis de vez em quando. Você pode excluir sua conta nos Ajustes a qualquer momento. Podemos restringir contas usadas para abusar do serviço ou de outros usuários.",
       "t.s7.h": "Marcas registradas", "t.s7.p": "SAT é uma marca registrada do College Board. O IELTS pertence em conjunto ao British Council, à IDP: IELTS Australia e à Cambridge University Press &amp; Assessment. O Octobo não tem vínculo com essas organizações nem é endossado por elas.",
-      "t.s8.h": "Dúvidas", "t.s8.p": `Para dúvidas sobre estes termos, envie um e-mail para ${MAIL} ou acesse o <a href="../support/">Suporte do Octobo</a>.`,
+      "t.s8.h": "Dúvidas", "t.s8.p": `Para dúvidas sobre estes termos, envie um e-mail para ${MAIL} ou acesse o <a href="../support/index.html">Suporte do Octobo</a>.`,
     },
 
     ja: {
@@ -380,7 +381,7 @@
       "p.s4.p": "サポートメッセージ、提案、単語の報告は、回答や問題の修正のために、アカウント識別子、アプリのバージョン、端末のモデル、言語、タイムゾーン、学習の進捗の概要とともに保存されます。",
       "p.s5.h": "サービス提供者と共有",
       "p.s5.p1": "認証、クラウドストレージ、分析、クラッシュ診断のサービス提供者としてGoogle Firebaseを利用しています。Octoboは個人情報を販売せず、第三者の広告を表示せず、アプリ間のトラッキングにデータを使用しません。",
-      "p.s5.p2": "Octobo Plusの利用状況の確認と復元のため、アカウント識別子と購入状況をRevenueCatと共有します。支払いはAppleが処理し、Octoboがお客様のカード情報を受け取ることはありません。",
+      "p.s5.p2": "Octobo Plusの利用状況の確認と復元のため、アカウント識別子と購入状況をRevenueCatと共有します。支払いはAppleが処理し、Octoboがお客様のカード情報を受け取ることはありません。 RevenueCatはサブスクリプションのイベントとアカウント識別子をPostHogに送信し、アプリは分析のために購入画面と購入手続きのイベントをPostHogに送信します。",
       "p.s6.h": "お客様の選択",
       "p.s6.p": "リマインダーは設定でオフにでき、単語の修正やサポートのリクエストを送信できます。また、プロフィール → 設定 → アカウント → アカウントを削除 から、アカウントと関連する学習データを完全に削除できます。",
       "p.s7.h": "データの保存と削除",
@@ -389,7 +390,7 @@
       "p.s8.h": "お子さま",
       "p.s8.p": "Octoboは13歳未満のお子さまを対象としていません。現地の法律で保護者の同意が必要な場合、同意がなければアカウントを作成しないでください。",
       "p.s9.h": "変更とお問い合わせ",
-      "p.s9.p": `重要な変更はこのページとアプリに反映されます。プライバシーに関するご質問や削除の問題は、${MAIL}までメールでお送りいただくか、<a href="../support/">Octoboサポート</a>をご覧ください。`,
+      "p.s9.p": `重要な変更はこのページとアプリに反映されます。プライバシーに関するご質問や削除の問題は、${MAIL}までメールでお送りいただくか、<a href="../support/index.html">Octoboサポート</a>をご覧ください。`,
 
       "support.title": "サポート — Octobo",
       "support.desc": "アカウント、学習の進捗、サブスクリプション、不具合、プライバシー、ご意見についてOctoboサポートへお問い合わせください。",
@@ -416,10 +417,12 @@
       "t.s5.h": "Octobo Plus", "t.s5.p": "2つの単語パックは無料で、Octobo Plusならすべてのパックを利用できます。対象となる新規メンバーは7日間の無料体験から始められ、体験終了の24時間前までに解約しない場合は有料のサブスクリプションに移行します。月額・年額のサブスクリプションは、解約するまでAppleが表示する価格で自動更新されます。サブスクリプションの管理や解約はAppleアカウントの設定から行えます。購入はアプリ内で復元できます。",
       "t.s6.h": "提供状況とアカウント", "t.s6.p": "機能は変更される場合があり、オンラインサービスが一時的に利用できないこともあります。アカウントは設定からいつでも削除できます。サービスやほかのユーザーに対する迷惑行為に使われたアカウントは制限する場合があります。",
       "t.s7.h": "商標", "t.s7.p": "SATはCollege Boardの商標です。IELTSはBritish Council、IDP: IELTS Australia、Cambridge University Press &amp; Assessmentが共同で所有しています。Octoboはこれらの団体と提携しておらず、承認も受けていません。",
-      "t.s8.h": "お問い合わせ", "t.s8.p": `本規約に関するご質問は、${MAIL}までメールでお送りいただくか、<a href="../support/">Octoboサポート</a>をご覧ください。`,
+      "t.s8.h": "お問い合わせ", "t.s8.p": `本規約に関するご質問は、${MAIL}までメールでお送りいただくか、<a href="../support/index.html">Octoboサポート</a>をご覧ください。`,
     },
   };
 
+  const SITE = window.OCTOBO_STRINGS || {};
+  const PACKS = window.OCTOBO_PACK_STRINGS || {};
   const supported = LANGUAGES.map(([code]) => code);
 
   function match(tag) {
@@ -455,7 +458,7 @@
   }
 
   function apply(lang) {
-    const strings = Object.assign({}, T.en, T[lang]);
+    const strings = Object.assign({}, T.en, SITE.en, PACKS.en, T[lang], SITE[lang], PACKS[lang]);
     document.documentElement.lang = lang;
     document.querySelectorAll("[data-i18n]").forEach((node) => {
       const value = strings[node.dataset.i18n];
@@ -465,30 +468,35 @@
       const value = strings[node.dataset.i18nContent];
       if (value !== undefined) node.setAttribute("content", value);
     });
+    document.querySelectorAll("[data-i18n-label]").forEach((node) => {
+      const value = strings[node.dataset.i18nLabel];
+      if (value !== undefined) node.setAttribute("aria-label", value);
+    });
     const titleKey = document.body.dataset.titleKey;
     if (titleKey && strings[titleKey]) document.title = strings[titleKey];
     document.querySelectorAll("a[href]").forEach((link) => {
       const href = link.getAttribute("href");
-      if (!href.startsWith("mailto:") && !href.startsWith("http")) link.setAttribute("href", withLang(href, lang));
+      if (/^(mailto:|https?:|#)/.test(href)) return;
+      link.setAttribute("href", withLang(href, lang));
     });
-    const picker = document.getElementById("lang-picker");
-    if (picker) picker.value = lang;
+    document.querySelectorAll(".lang-picker").forEach((picker) => { picker.value = lang; });
+    document.dispatchEvent(new CustomEvent("octobo:lang", { detail: lang }));
   }
 
-  function buildPicker() {
-    const picker = document.getElementById("lang-picker");
-    if (!picker) return;
-    LANGUAGES.forEach(([code, name]) => picker.add(new Option(name, code)));
-    picker.addEventListener("change", () => {
-      const lang = picker.value;
-      try { localStorage.setItem("octobo-lang", lang); } catch {}
-      const url = new URL(location.href);
-      url.searchParams.set("lang", lang);
-      history.replaceState(null, "", url);
-      apply(lang);
+  function buildPickers() {
+    document.querySelectorAll(".lang-picker").forEach((picker) => {
+      LANGUAGES.forEach(([code, name]) => picker.add(new Option(name, code)));
+      picker.addEventListener("change", () => {
+        const lang = picker.value;
+        try { localStorage.setItem("octobo-lang", lang); } catch {}
+        const url = new URL(location.href);
+        url.searchParams.set("lang", lang);
+        history.replaceState(null, "", url);
+        apply(lang);
+      });
     });
   }
 
-  buildPicker();
+  buildPickers();
   apply(resolveLanguage());
 })();
