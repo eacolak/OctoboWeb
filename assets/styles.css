@@ -101,7 +101,7 @@ svg { flex: none; }
 .bubbles i { position: absolute; bottom: -60px; border-radius: 50%; background: radial-gradient(circle at 30% 30%, rgb(255 255 255 / 70%), rgb(255 255 255 / 10%) 45%, rgb(255 255 255 / 3%) 70%); box-shadow: inset 0 0 0 1px rgb(255 255 255 / 35%); animation: rise linear infinite; }
 @keyframes rise { 0% { transform: translate(0, 0); opacity: 0; } 10% { opacity: .7; } 50% { transform: translate(18px, -50vh); } 100% { transform: translate(-12px, -110vh); opacity: 0; } }
 .hero { min-height: max(820px, calc(100svh - 24px)); display: flex; flex-direction: column; align-items: center; padding: 130px 24px 0; text-align: center; }
-.hero-copy { display: flex; flex-direction: column; align-items: center; position: relative; z-index: 2; }
+.hero-copy { display: flex; flex-direction: column; align-items: center; position: relative; z-index: 2; margin-bottom: 56px; }
 .hero h1 { max-width: 1080px; font-family: "Nunito", var(--font); font-size: clamp(56px, 7.3vw, 104px); font-weight: 800; letter-spacing: -.045em; line-height: 1; }
 .hero h1 .soft { color: rgb(255 255 255 / 75%); }
 .hero .lede { max-width: 630px; margin-top: 24px; color: rgb(255 255 255 / 92%); font-size: clamp(16px, 1.4vw, 19px); line-height: 1.65; }
@@ -110,25 +110,16 @@ svg { flex: none; }
 .hero-actions .store-btn:hover { background: #222; }
 .hero-actions .btn-glass { min-height: 56px; padding-inline: 24px; background: rgb(255 255 255 / 12%); border-color: rgb(255 255 255 / 35%); color: #fff; border-radius: 10px; }
 .hero-actions .btn-glass:hover { background: rgb(255 255 255 / 22%); }
-.hero-stage { position: relative; width: min(980px, 100%); height: 340px; min-height: 340px; margin-top: auto; }
+.hero-stage { position: relative; width: min(980px, 100%); height: 540px; min-height: 540px; margin-top: auto; }
 .hero-mascot { position: absolute; left: 50%; bottom: -60px; width: 420px; max-width: 78vw; transform: translateX(-50%); filter: drop-shadow(0 30px 40px rgb(5 50 120 / 20%)); animation: bob 6s ease-in-out infinite; }
 @keyframes bob { 0%, 100% { translate: 0 0; } 50% { translate: 0 -14px; } }
-.float { position: absolute; z-index: 1; animation: floaty 7s ease-in-out infinite; }
-@keyframes floaty { 0%, 100% { translate: 0 0; } 50% { translate: 0 -10px; } }
-.chip { display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px 10px 10px; border-radius: 999px; background: #fff; color: var(--navy); font-size: 13px; font-weight: 600; white-space: nowrap; box-shadow: 0 16px 34px -14px rgb(5 40 100 / 24%); }
-.chip .ic { display: grid; place-items: center; width: 30px; height: 30px; border-radius: 50%; }
-.chip .ic svg { width: 17px; height: 17px; }
-.word-card { width: 192px; padding: 18px 18px 20px; border-radius: 22px; background: #fff; color: var(--navy); text-align: center; box-shadow: 0 24px 50px -20px rgb(5 40 100 / 30%); rotate: -6deg; }
-.word-card .tag { display: inline-block; padding: 3px 10px; border-radius: 8px; background: #e1f7f5; color: #00897e; font-size: 11px; font-weight: 600; }
-.word-card .icon { display: grid; place-items: center; width: 60px; height: 60px; margin: 14px auto 8px; border-radius: 18px; background: #e6f6fe; color: #168cf5; }
-.word-card .icon svg { width: 30px; height: 30px; }
-.word-card strong { display: block; font-size: 30px; font-weight: 700; letter-spacing: -.03em; line-height: 1.2; }
-.word-card .ipa { display: block; margin-top: 4px; color: #5b6b86; font-size: 12px; }
-.word-card .def { display: inline-block; margin-top: 10px; color: #5b6b86; font-size: 12px; }
-.f1 { left: 5%; top: 28px; }
-.f2 { right: 5%; top: 32px; animation-delay: -2s; }
-.f3 { right: 10%; top: 188px; animation-delay: -4s; }
-.f4 { left: 19%; top: 265px; animation-delay: -1s; }
+/* Photo cards on a slowly spinning 3D ring, seen from slightly below so the ends curve down. */
+.photo-arc { --w: 186px; --r: 860px; --step: 15deg; position: absolute; top: 0; left: 50%; width: var(--w); height: calc(var(--w) * 1.25); margin-left: calc(var(--w) / -2); perspective: 1100px; perspective-origin: 50% 170%; pointer-events: none; }
+.photo-ring { position: absolute; inset: 0; transform-style: preserve-3d; transform: translateZ(calc(var(--r) * -1)); animation: spin 120s linear infinite; }
+@keyframes spin { from { transform: translateZ(calc(var(--r) * -1)) rotateY(0deg); } to { transform: translateZ(calc(var(--r) * -1)) rotateY(-360deg); } }
+.photo-card { position: absolute; inset: 0; margin: 0; overflow: hidden; border: 3px solid #fff; border-radius: 16px; background: #cfe6fb; box-shadow: 0 22px 40px -18px rgb(5 40 100 / 45%); backface-visibility: hidden; transform: rotateY(calc(var(--i) * var(--step))) translateZ(var(--r)); }
+.photo-card img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.photo-card figcaption { position: absolute; left: 10px; bottom: 10px; padding: 4px 10px; border-radius: 999px; background: rgb(255 255 255 / 92%); color: var(--navy); font-size: 12px; font-weight: 700; letter-spacing: -.01em; }
 
 /* Gentle topic ticker, with pause and reduced-motion support. */
 .strip { padding-block: 28px 38px; border-block: 1px solid var(--line); background: #fbfcfd; }
@@ -441,21 +432,12 @@ section { position: relative; }
   .hero-actions .btn-glass { padding-inline: 12px; font-size: 12px; min-height: 52px; }
   .hero-actions .store-btn { min-height: 52px; padding-inline: 16px; }
   .hero-actions .store-btn strong { font-size: 17px; }
-  .hero-stage { height: 300px; min-height: 300px; margin-top: auto; }
+  .hero-copy { margin-bottom: 36px; }
+  .hero-stage { height: 420px; min-height: 420px; margin-top: auto; }
   .hero-mascot { left: 56%; width: 320px; max-width: 88vw; bottom: -40px; }
-  .word-card { width: 116px; padding: 12px; border-radius: 17px; }
-  .word-card .tag { font-size: 9px; padding: 2px 8px; }
-  .word-card .icon { width: 42px; height: 42px; margin-top: 10px; border-radius: 12px; }
-  .word-card .icon svg { width: 23px; height: 23px; }
-  .word-card strong { font-size: 22px; }
-  .word-card .ipa, .word-card .def { font-size: 9px; }
-  .chip { gap: 6px; padding: 7px 10px 7px 7px; font-size: 10px; }
-  .chip .ic { width: 24px; height: 24px; }
-  .chip .ic svg { width: 14px; height: 14px; }
-  .f1 { left: -3px; top: 0; }
-  .f2 { right: 0; top: 0; }
-  .f3 { right: 0; top: 235px; }
-  .f4 { display: none; }
+  .photo-arc { --w: 118px; --r: 560px; perspective: 800px; }
+  .photo-card { border-width: 2px; border-radius: 12px; }
+  .photo-card figcaption { left: 6px; bottom: 6px; padding: 3px 7px; font-size: 9px; }
   .feature-intro { align-items: center !important; text-align: center !important; }
   .feature-intro .sub { font-size: 14px; margin-inline: auto !important; }
   .habit-card { min-height: 120px; margin-bottom: 42px; padding: 22px; }
