@@ -126,47 +126,31 @@
   mobilePacks.addEventListener("change", revealPackDestination);
   revealPackDestination();
 
-  // Each step selects its matching screen. All screens remain available without JS.
-  const steps = [...document.querySelectorAll(".step")];
-  const shots = [...document.querySelectorAll(".shot")];
-  if (steps.length && steps.length === shots.length) {
-    const list = document.querySelector(".steps");
-    list.setAttribute("role", "tablist");
-    list.setAttribute("aria-orientation", "vertical");
-    const heading = document.querySelector(".how .h2");
-    heading.id = "how-heading";
-    list.setAttribute("aria-labelledby", heading.id);
-    steps.forEach((step, index) => {
-      step.parentElement.setAttribute("role", "presentation");
-      step.setAttribute("role", "tab");
-      shots[index].setAttribute("role", "tabpanel");
-      shots[index].tabIndex = 0;
-    });
-    function activate(index, focus = false) {
-      steps.forEach((step, current) => {
-        const active = current === index;
-        step.classList.toggle("active", active);
-        step.setAttribute("aria-selected", String(active));
-        step.tabIndex = active ? 0 : -1;
-        shots[current].hidden = !active;
+  // FAQ answers open and close with a smooth height transition.
+  document.querySelectorAll(".faq-item").forEach((item) => {
+    const summary = item.querySelector("summary");
+    let animation;
+    summary.addEventListener("click", (event) => {
+      if (reduceMotion.matches || !item.animate) return;
+      event.preventDefault();
+      const closing = item.open && !item.classList.contains("is-closing");
+      const from = item.offsetHeight;
+      animation?.cancel();
+      item.classList.toggle("is-closing", closing);
+      item.classList.add("is-animating");
+      item.open = true;
+      const border = item.offsetHeight - item.clientHeight;
+      const to = closing ? summary.offsetHeight + border : item.scrollHeight + border;
+      animation = item.animate({ height: [`${from}px`, `${to}px`] }, {
+        duration: 520, easing: "cubic-bezier(.4, 0, .2, 1)"
       });
-      if (focus) steps[index].focus();
-    }
-    steps.forEach((step, index) => {
-      step.addEventListener("click", () => activate(index));
-      step.addEventListener("keydown", (event) => {
-        let next;
-        if (event.key === "ArrowDown" || event.key === "ArrowRight") next = (index + 1) % steps.length;
-        if (event.key === "ArrowUp" || event.key === "ArrowLeft") next = (index + steps.length - 1) % steps.length;
-        if (event.key === "Home") next = 0;
-        if (event.key === "End") next = steps.length - 1;
-        if (next === undefined) return;
-        event.preventDefault();
-        activate(next, true);
-      });
+      animation.onfinish = () => {
+        animation = null;
+        if (closing) item.open = false;
+        item.classList.remove("is-closing", "is-animating");
+      };
     });
-    activate(0);
-  }
+  });
 
   // Legal documents keep their table of contents in sync with the section in view.
   const tocLinks = [...document.querySelectorAll(".toc a")];
