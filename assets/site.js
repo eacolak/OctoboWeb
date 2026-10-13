@@ -28,28 +28,6 @@
     if (event.matches) closeMenu();
   });
 
-  // The pack ticker can be paused, and does not animate with reduced motion.
-  const strip = document.querySelector(".strip");
-  const motionToggle = strip?.querySelector(".marquee-toggle");
-  function updateMotionLabel() {
-    if (!motionToggle) return;
-    const paused = strip.classList.contains("paused");
-    const key = paused ? "packs.motion.resume" : "packs.motion.pause";
-    motionToggle.dataset.i18nLabel = key;
-    const strings = window.OCTOBO_STRINGS || {};
-    const language = document.documentElement.lang;
-    motionToggle.setAttribute("aria-label", strings[language]?.[key] || strings.en?.[key] || key);
-    motionToggle.setAttribute("aria-pressed", String(paused));
-    motionToggle.hidden = reduceMotion.matches;
-  }
-  motionToggle?.addEventListener("click", () => {
-    strip.classList.toggle("paused");
-    updateMotionLabel();
-  });
-  reduceMotion.addEventListener("change", updateMotionLabel);
-  document.addEventListener("octobo:lang", updateMotionLabel);
-  updateMotionLabel();
-
   // Full photos fade in over their blurred previews once decoded.
   document.querySelectorAll(".lqip > img").forEach((image) => {
     const done = () => image.parentElement.classList.add("is-loaded");
@@ -116,7 +94,7 @@
   reduceMotion.addEventListener("change", setRevealMotion);
   setRevealMotion();
 
-  // Ticker links to packs collapsed on mobile lead to their summary card.
+  // Links to packs collapsed on mobile lead to their summary card.
   const mobilePacks = window.matchMedia("(max-width: 720px)");
   function revealPackDestination() {
     if (!mobilePacks.matches || !location.hash) return;
