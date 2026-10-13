@@ -9,7 +9,7 @@
     ["pt-BR", "Português (Brasil)"],
     ["ja", "日本語"],
   ];
-  const MAIL = '<a href="mailto:ea.colak0@gmail.com">ea.colak0@gmail.com</a>';
+  const MAIL = '<a href="mailto:support@octobo.app">support@octobo.app</a>';
 
   const T = {
     en: {
