@@ -50,6 +50,16 @@
   document.addEventListener("octobo:lang", updateMotionLabel);
   updateMotionLabel();
 
+  // Full photos fade in over their blurred previews once decoded.
+  document.querySelectorAll(".lqip > img").forEach((image) => {
+    const done = () => image.parentElement.classList.add("is-loaded");
+    if (image.complete) done();
+    else {
+      image.addEventListener("load", () => (image.decode ? image.decode().catch(() => {}) : Promise.resolve()).then(done), { once: true });
+      image.addEventListener("error", done, { once: true });
+    }
+  });
+
   // The welcome keeps its floating bubbles; only visible scenes animate.
   const hero = document.querySelector(".hero-frame");
   const bubbles = hero?.querySelector(".bubbles");
@@ -76,7 +86,7 @@
 
   // Observe once, animate with transforms/opacity, then release each element.
   const revealNodes = [...document.querySelectorAll(
-    ".home [data-reveal], .home h1, .home .hero .lede, .home .hero-actions, " +
+    ".home [data-reveal], " +
     ".home .h2, .home .sub, .home .wide-card, .home .trust-card, " +
     ".home .packs-grid > *, .home .price, .home .faq-item, .home .cta h2, .home .cta p"
   )];
