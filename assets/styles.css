@@ -208,8 +208,7 @@ section { position: relative; }
 .journey-shot { display: flex; justify-content: center; height: 300px; padding: 26px 26px 0; overflow: hidden; background: var(--tint, var(--sky-soft)); }
 .journey-shot .phone { width: 100%; max-width: 190px; align-self: flex-start; border-radius: 20px; }
 .journey-copy { padding: 22px 22px 26px; border-top: 1px solid var(--line); }
-.journey-copy .step-number { display: inline-grid; place-items: center; width: 30px; height: 30px; border-radius: 8px; color: var(--tone, var(--sky)); background: var(--tint, var(--sky-soft)); font-size: 11px; font-weight: 600; }
-.journey-copy h3 { margin-top: 14px; font-size: 16px; font-weight: 600; letter-spacing: -.02em; line-height: 1.35; }
+.journey-copy h3 { font-size: 16px; font-weight: 600; letter-spacing: -.02em; line-height: 1.35; }
 .journey-copy p { margin-top: 8px; color: var(--muted); font-size: 12px; line-height: 1.7; }
 
 /* Word packs */
